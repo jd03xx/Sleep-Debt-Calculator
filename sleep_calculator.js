@@ -32,9 +32,9 @@ function getActualSleepHours(){
     return totalSleepHours;
 };
 
-function getIdealSleepHours(){
+function getIdealSleepHours(hours){
     // ideal number of sleep hours each night
-    const idealHours = 8;
+    const idealHours = hours;
     // total ideal hours for a week
     return idealHours * 7
 };
@@ -42,7 +42,7 @@ function getIdealSleepHours(){
 //Calculates your sleep debt if any
 function calculateSleepDebt(){
     let actualSleepHours = getActualSleepHours();
-    let idealSleepHours =  getIdealSleepHours();
+    let idealSleepHours =  getIdealSleepHours(8);
 
     if (actualSleepHours === idealSleepHours){
         console.log('You reached your sleep hours goal!');
